@@ -50,8 +50,8 @@ function getBlogByPage(request, response) {
             result[i].content = result[i].content.replace(/<\/[a-zA-Z]+>/g, "");
             result[i].content = result[i].content.replace(/<img src="data:image\/jpeg;[\w\W]+>/g, "");
             result[i].ctime = timeUtile.timeFormat(result[i].ctime);
-            if (result[i].content.length > 300) {
-                result[i].content = result[i].content.substr(0, 300);
+            if (result[i].content.length > 100) {
+                result[i].content = result[i].content.substr(0, 100) + "...";
             }
         }
         response.writeHead(200);
@@ -113,8 +113,8 @@ function queryBlogsByTagsByPage(request, response) {
                         results[j].content = results[j].content.replace(/<\/[a-zA-Z]+>/g, "");
                         results[j].content = results[j].content.replace(/<img src="data:image\/jpeg;[\w\W]+>/g, "");
                         results[j].ctime = timeUtile.timeFormat(results[j].ctime);
-                        if (results[j].content.length > 300) {
-                            results[j].content = results[j].content.substr(0, 300);
+                        if (results[j].content.length > 100) {
+                            results[j].content = results[j].content.substr(0, 100) + "...";
                         }
                     }
                     response.writeHead(200);

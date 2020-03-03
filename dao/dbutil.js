@@ -2,10 +2,10 @@ let mysql = require("mysql");
 
 function createConnection() {
     let connection = mysql.createConnection({
-        host: "192.168.0.104",
-        port: "3306",
+        host: "cdb-oqaw3yte.cd.tencentcdb.com",
+        port: "10020",
         user: "root",
-        password: "123456",
+        password: "567890xw",
         database: "my_blog"
     });
     return connection;
