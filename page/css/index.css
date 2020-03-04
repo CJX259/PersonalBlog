@@ -1,0 +1,114 @@
+
+#every_day{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    border-radius: 8px;
+    background: white;
+    opacity: .9;
+    box-shadow: 5px 5px 5px #333;    
+    /* border-color: #bfbfbf #8e8e8e #5f5f5f #bfbfbf; */
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    background: #008c8c;
+    color : #eee;
+    opacity: .8;
+}
+#every_day > span{
+    font-size: 12px;
+}
+#every_day > p{
+    font-weight: 600;
+}
+#blog-list{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+#blog-list .blog{
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+    background: white;
+    opacity: .8;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px;
+    border-color: #bfbfbf #333 #333333 #bfbfbf;
+    padding: 10px 0px 0px 0px;
+    box-sizing: border-box;
+}
+/* 5f5f5f */
+#blog-list .blog .blog-title{
+    display: inline-block;
+    color: #008c8c;
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    padding: 15px 0px 10px 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+#blog-list .blog > p{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    word-wrap:break-word;
+}
+#blog-list .blog .blog-foot{
+    display: inline-block;
+    width: 100%;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background: #008c8c;
+    box-sizing: border-box;
+    padding: 5px 0px 5px 9px;
+    color : white;
+}
+#blog-list .blog .blog-foot > span{
+    margin-left : 10px
+}
+#pageTools {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 20px 0px 0px 0px;
+}
+#pageTools > ul {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+#pageTools > ul > li {
+    opacity: .8;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    /* border: 1px solid; */
+    border-radius: 4px;
+    cursor: pointer;
+    background: white;
+    overflow: hidden;
+    margin-left: 5px;
+    box-shadow: 3px 3px 3px;
+}
+#pageTools > ul > li > span {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.selectOn {
+    background: #008c8c;
+    color: white;
+}
+.selectOff {
+    background: white;
+    color: #000;
+}
