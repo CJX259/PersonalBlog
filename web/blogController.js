@@ -50,8 +50,8 @@ function getBlogByPage(request, response) {
             result[i].content = result[i].content.replace(/<\/[a-zA-Z]+>/g, "");
             result[i].content = result[i].content.replace(/<img src="data:image\/jpeg;[\w\W]+>/g, "");
             result[i].ctime = timeUtile.timeFormat(result[i].ctime);
-            if (result[i].content.length > 300) {
-                result[i].content = result[i].content.substr(0, 300);
+            if (result[i].content.length > 100) {
+                result[i].content = result[i].content.substr(0, 100);
             }
         }
         response.writeHead(200);
@@ -155,6 +155,15 @@ function search(request, response){
         return;
     }
     blogDao.queryBlogBySearch(params.search, function(result){
+        for (let i = 0; i < result.length; i++) {
+            result[i].content = result[i].content.replace(/<[a-zA-Z]+>/g, "");
+            result[i].content = result[i].content.replace(/<\/[a-zA-Z]+>/g, "");
+            result[i].content = result[i].content.replace(/<img src="data:image\/jpeg;[\w\W]+>/g, "");
+            result[i].ctime = timeUtile.timeFormat(result[i].ctime);
+            if (result[i].content.length > 100) {
+                result[i].content = result[i].content.substr(0, 100);
+            }
+        }
         blogDao.queryBlogBySearchCount(params.search, function(count){
             response.writeHead(200);
             response.write(respUtil.writeResult("success", "成功", {count : count, blogList : result}));
