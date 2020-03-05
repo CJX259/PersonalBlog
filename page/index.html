@@ -44,7 +44,7 @@
                         </li>
                     </ul>
                 </div>
-                <div id="pageTools">
+                <div id="pageTools" v-if="display" >
                     <ul>
                         <li v-for="(key, index) of pageList">
                             <span @click="changePage(key.pageNum)"

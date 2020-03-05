@@ -90,7 +90,8 @@ let pageTools = new Vue({
         total: 0,
         nowPage: 1,
         limit: 3,
-        pageList: []
+        pageList: [],
+        display: true
     },
     methods: {
         refresh: function () {
@@ -207,9 +208,7 @@ let searchBar = new Vue({
                     url: "/search?search=" + this.search,
                     method: "get"
                 }).then(resp => {
-                    pageTools.total = resp.data.data.count;
-                    pageTools.nowPage = 1;
-                    pageTools.refresh();
+                    pageTools.display = false;
                     for (let i = 0; i < resp.data.data.blogList.length; i++) {
                         resp.data.data.blogList[i].link = "/blog_detail.html?bid=" + resp.data.data.blogList[i].id;
                         resp.data.data.blogList[i].tags = resp.data.data.blogList[i].tags.split("，");
