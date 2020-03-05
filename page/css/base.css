@@ -23,6 +23,8 @@ body {
   position: relative;
   background-size: 1600px;
   min-width: 1065px;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
 }
 .header {
   width: 100%;
