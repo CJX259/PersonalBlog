@@ -2,6 +2,10 @@ let express = require("express");
 let app = new express();
 let globalConfig = require("./config.js");
 let loader = require('./loader');
+let history = require('connect-history-api-fallback');
+app.use(history({
+	index : "./jessy/index.html"
+}));
 app.use(express.static(__dirname + "/" + globalConfig.page_path));
 app.post("/editEveryDay" , loader.get("/editEveryDay"));
 app.get("/queryEveryDay" , loader.get("/queryEveryDay"));
