@@ -18,7 +18,7 @@ app.use(require('./util/renderTime'));
 // app.get('/renderTime', require('./util/renderTime'));
 //使用中间件处理history.api带来的问题,页面请求不到都跳转到jessy的index.html页面
 // 设置缓存
-app.use(express.static(__dirname + "\\" + globalConfig.page_path));
+app.use(express.static(path.resolve(__dirname, `./${globalConfig.page_path}`)));
 app.use(express.static(path.resolve(__dirname, './public')));
 
 // app.use(express.static(__dirname + "\\" + globalConfig.page_path + "\\dist"));
